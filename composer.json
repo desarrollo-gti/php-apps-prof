@@ -1,0 +1,10 @@
+{
+    "require": {
+        "nesbot/carbon": "^2.45"
+    },
+    "autoload":{
+        "psr-4":{
+            "lib\\": "lib/"
+        }
+    }
+}
