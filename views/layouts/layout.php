@@ -4,46 +4,24 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
-        <title>Hello, world!</title>
+        <title><?= $mainTitle ?></title>
     </head>
     <body>
-        <div class="container my-3">
-        <h1>Hello, world!</h1>
-        <?php
-        require '../vendor/autoload.php';
+        <div class="container">
+            <header class="p-3 mb-2 bg-info text-dark">Encabezado de página puede ir el logo</header>
+            <h1>Layout</h1>
 
-        use Carbon\Carbon;
-        use lib\Dates;
-        use League\Plates\Engine;
+            <main>
+                <?= $this->section('content') ?>
+            </main>
 
-//Traer todas las vista te plates
-        $templates = new Engine('../views');
-        $date = Carbon::now();
-        echo $date->format('Y');
-
-        Carbon::setLocale('es');
-        $today = Carbon::now();
-        $tomorrow = $today->addDays(1);
-        echo $tomorrow->isoFormat('dddd DD [de] MMMM');
-//include '../lib/Dates.php';
-        ?>
-        <p>Con php es f�cil hacer spaghetti code y mezclar la presentaci�n, el html con c�digo </p>
-        <p>
-            pero en 
-            <?= Dates::longDate(Dates::today()) ?> 
-            lo vamos a solucionar.
-        </p>
-
-        <?=
-        $templates->render('template-test', [
-            'subtitle' => 'Bienvenidos a Granser TI SpA'
-        ]);
-        ?>
-</div>
+            <footer>
+                copyright GranSer Ti SpA
+                <?= $this->section('footerLinks'); ?>
+            </footer>
+        </div>
         <!-- Optional JavaScript; choose one of the two! -->
 
         <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -56,5 +34,3 @@
         -->
     </body>
 </html>
-
-

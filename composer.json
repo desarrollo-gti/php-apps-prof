@@ -1,6 +1,7 @@
 {
     "require": {
-        "nesbot/carbon": "^2.45"
+        "nesbot/carbon": "^2.45",
+        "league/plates": "^3.4"
     },
     "autoload":{
         "psr-4":{
