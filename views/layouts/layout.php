@@ -11,12 +11,12 @@
     <body>
         <div class="container">
             <header class="p-3 mb-2 bg-info text-dark">Encabezado de página puede ir el logo</header>
-            <h1>Layout</h1>
+            <h1>Layout Principal para todo el sitio</h1>
 
             <main>
                 <?= $this->section('content') ?>
             </main>
-
+            
             <footer>
                 copyright GranSer Ti SpA
                 <?= $this->section('footerLinks'); ?>

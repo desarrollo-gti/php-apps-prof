@@ -1,8 +1,11 @@
 <?php $this->layout('layouts/layout', [
-    'mainTitle' => 'Esta es la página 3'
-]) ?>
-<p>Hola, otro contenido... </p>
-<!--insertamos el parcial-->
-<?php $this->insert('partials/some-markup', [
-    'courseTitle' => 'Aplicaciones profesionales php'
+    'mainTitle' => 'Página 3'
 ]); ?>
+<h6>Hello, world, esto es contendido incrustado en el layout principal con otro contenido</h6>
+
+<p>
+    otro contenido... con el mismo template
+</p>
+<?php $this->insert('partials/some-markup', [
+    'courseTitle' =>'Aplicaciones profesionales en php'
+]);
